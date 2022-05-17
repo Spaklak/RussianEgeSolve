@@ -42,10 +42,10 @@ for i in range(1,32+1):
 
 print('=========')
 for i in range(1,32+1):
-    if f(8,i,0):
+    if f1(8,i,0):
         print(i)
 print('=========')
 for i in range(1,32+1):
-    if f(8,i,0):
+    if f2(8,i,0):
         print(i)
 print('=========')
