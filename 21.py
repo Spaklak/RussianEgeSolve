@@ -11,7 +11,7 @@ def f(x, s, p):
         return f(x+1,s,p+1) and f(x*2,s,p+1) and f(x,s+1,p+1) and f(x,s*2,p+1)
 
 for i in range(1,213+1):
-    if f(i,17,0):
+    if f(17,i,0):
         print(i)
 
         
