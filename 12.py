@@ -1,6 +1,7 @@
-s = 1000 * '7' + 1000 * '3'
-while '777' in s or '333' in s:
-    s=s.replace('777','3',1)
-    s=s.replace('333','7',1)
-
+s = '9' * 96
+while '22222' in s or '9999' in s:
+    if '22222' in s:
+        s = s.replace('22222', '99', 1)
+    else:
+        s = s.replace('9999','2',1)
 print(s)
