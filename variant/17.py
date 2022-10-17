@@ -1,15 +1,20 @@
 data = open('17.txt')
 spisok = [int(x) for x in data.read().split()]
-minimum = 100000
-count = 0
-maxim = []
+spisokEleven = []
+countEleven = 0
+spisokSeventyn = []
+countSeventyn = 0
 for i in spisok:
-    if i > 0 and i % 19 == 0:
-        minimum = min(minimum, i)
+    if i % 11 == 0:
+        countEleven += 1
+        spisokEleven.append(i)
+    if i % 17 == 0:
+        countSeventyn += 1
+        spisokSeventyn.append(i)
 
-for i in range(len(spisok) - 1):
-    if spisok[i] + spisok[i+1] < minimum:
-        count += 1
-        maxim.append(spisok[i] + spisok[i+1])
+if countEleven > countSeventyn:
+    print(countEleven, min(spisokEleven))
+else:
+    print(countSeventyn, min(spisokSeventyn))
 
-print(count, abs(max(maxim)))
+data.close()

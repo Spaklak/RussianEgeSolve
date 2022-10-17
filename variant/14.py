@@ -1,6 +1,6 @@
-for i in range(1,11):
-    a = 2 * i ** 0 + 3 * i ** 1 + 1 * i ** 2
-    b = 3 * 8 ** 0 + 1 * 8 ** 1
-    c = 4 * (i+1) ** 0 + 2 * (i+1) ** 1 + 1 * (i+1) ** 2
-    if a + b == c:
-        print(i) 
+s = 3 * 256 ** 320 - 2 * 64 ** 290 + 4 ** 250 - 1023
+massivchik = []
+while s:
+    massivchik.append(s % 4)
+    s //= 4
+print(len(massivchik) - massivchik.count(0))

@@ -1,12 +1,9 @@
-def f(x,z,p):
-    if z < 0:
-        return False
-    elif (x >= 51 or p > 3) and z > 0:
+def f(x,y,p):
+    if x + y >= 88 or p > 3:
         return p == 3
-    return f(x+1,z-1,p+1) or f(x+2,z-2,p+1) or f(x*2,z-x*2,p+1)
+    return f(x+1, y, p +1) or f(x * 3,y,p+1) or f(x,y+1,p+1) or f(x,y*3,p+1)
 
-for i in range(1,51):
-    if f(i,60,1):
+for i in range(1,82):
+    if f(6,i,1):
         print(i)
-
-#неверно
+        break

@@ -1,9 +1,17 @@
+from functools import lru_cache
+
+@lru_cache(None)
 def f(n):
     if n == 1:
         return 1
-    if n > 1 and n % 2 != 0:
-        return 3 * n + f(n-2)
-    if n > 1 and n % 2 == 0:
-        return 4 * f(n//2)
+    if n > 1:
+        return f(n-1) - 2 * g(n-1)
 
-print(f(42))
+@lru_cache(None)
+def g(n):
+    if n == 1:
+        return 1
+    if n > 1: 
+        return f(n-1) + g(n-1) + n
+
+print(g(36))

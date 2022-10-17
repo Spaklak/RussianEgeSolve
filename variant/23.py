@@ -1,11 +1,9 @@
-def f(x,y,p):
-    if x%2 ==0:
-        p+=1
-    if x>y or p>6:
+def f(x,y):
+    if x < y:
         return 0
-    if x==y and p==6:
+    if x == y:
         return 1
-    
-    return f(x+1,y,p) + f(x+3,y,p) + f(x+5,y,p)
+    if x > y:
+        return f(x-2,y) + f(x//2,y)
 
-print(f(3,25,0))
+print(f(28,10) * f(10,1))
