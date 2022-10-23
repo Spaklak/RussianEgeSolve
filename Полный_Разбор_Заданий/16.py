@@ -1,8 +1,8 @@
 from functools import lru_cache # библиотека для ускорения рекурсии 
 import sys
-sys.getrecursionlimit(10000) 
+sys.setrecursionlimit(2000)
 '''
-sys.getrecursionlimit(10000) позволяет увеличить глубину рекурсии
+нужно, чтобы увеличить глубину рекурсии
 '''
 @lru_cache(None) # статичный метод, который нужен для ускорения рекурсии
 def f(n):
