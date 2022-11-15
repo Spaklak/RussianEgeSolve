@@ -34,6 +34,3 @@ for keys in cinema:
             maxim = max(listcount)
             maximkeys = keys
 print(maximkeys, maxim)
-        
-
-
