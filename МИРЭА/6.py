@@ -4,4 +4,4 @@ def F(n):
     else:
         return 1
 
-print(F(6))
+print(F(6)) # 8

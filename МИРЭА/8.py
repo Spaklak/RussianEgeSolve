@@ -10,4 +10,4 @@ for a in range(-1000, 1000):
     if p:
         count += 1
 
-print(count)
+print(count) # 19
